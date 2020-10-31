@@ -3,6 +3,7 @@ const Home = ()=>{
     return (
         <div>
             welcome to  HomePage
+            lol
         </div>
     )
 }
