@@ -44,13 +44,13 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
       setCurrentUser(user)
-    
+      
+    })
 
-    },[])
     return unsubscribe
-  })
+  }, [])
 
-  const value = {
+  const val = {
     currentUser,
     login,
     signup,
@@ -62,7 +62,7 @@ export function AuthProvider({ children }) {
   }
 
   return (
-    <AuthContext.Provider value={value}>
+    <AuthContext.Provider value={val}>
       {children}
     </AuthContext.Provider>
   )

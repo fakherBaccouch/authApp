@@ -1,3 +1,4 @@
+import { FormatStrikethrough } from "@material-ui/icons"
 import React from "react"
 import { useHistory, Route, Redirect } from "react-router-dom"
 import { useAuth } from "./context/AuthContext"
@@ -5,6 +6,7 @@ import { useAuth } from "./context/AuthContext"
 
 export default function PrivateRouteOrders({ component: Component, ...rest }) {
   const { currentUser } = useAuth()
+  const history = useHistory()
 
 
   return (
@@ -12,7 +14,7 @@ export default function PrivateRouteOrders({ component: Component, ...rest }) {
       {...rest}
       render={(props) => {
 
-        if (currentUser) { return <Component {...props} /> }
+        if (currentUser) { return <Component {...props} /> }else{history.push("/signin")}
       }}
     ></Route>
   )
