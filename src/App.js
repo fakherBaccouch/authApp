@@ -18,9 +18,10 @@ function App() {
       <AuthProvider>
         <Switch>
           <Route path='/' exact component={Home} />
-          <PrivateRoute path="/signin" exact component={SignIn} />
+        
           <PrivateRoute path="/signup" exact component={SignUp} />
           <PrivateRouteOrders path="/orders" exact component={OrdersPush} />
+          <PrivateRoute path="/signin" exact component={SignIn} />
           <ProtectedRouteAdminDash path="/admin" component={Admin} />
 
 
