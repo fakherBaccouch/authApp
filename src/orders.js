@@ -61,6 +61,7 @@ const OrdersPush=()=>{
        }else{
          return (
           <div>
+           {/*simple exemple of getting specific user info (email address)*/}
           {orders && currentUser&& Object.keys(orders).map(key=>{if(orders[key].email === currentUser.email){return  <p>{orders[key].email}<button onClick={()=>delet(key)}> X</button></p>}})}
 <button onClick={post}>POST</button>
 <button onClick={handleLogout}>LOG OUT</button>

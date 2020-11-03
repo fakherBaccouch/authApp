@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from 'react'
+import React, {  useRef, useState } from 'react'
 import { Link, useHistory } from "react-router-dom"
 import { useAuth } from "../context/AuthContext"
 import Avatar from '@material-ui/core/Avatar';

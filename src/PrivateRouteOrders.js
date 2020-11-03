@@ -1,4 +1,4 @@
-import { FormatStrikethrough } from "@material-ui/icons"
+
 import React from "react"
 import { useHistory, Route, Redirect } from "react-router-dom"
 import { useAuth } from "./context/AuthContext"
